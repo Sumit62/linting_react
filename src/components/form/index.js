@@ -43,6 +43,7 @@ export const CrudExample = () => {
   };
   const onDeleteHandle = id => {
     setUserList(userList.filter(item => item.id !== id));
+    if (userList.length === 1) setUser({ ...user, id: 1 });
   };
   return (
     <>
